@@ -10,22 +10,60 @@
     height: 50px;
 }
 
-#my-name {
-    color: white;
-    font-size: 32pt;
-    font-family: sans-serif;
-    padding-left: 5px;
-}
-
 body {
     background-color: rgb(104, 144, 170);
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
 }
 
 .container-fluid {
     padding: 0px;
 }
 
-#profile-pic {
-    height: 150px;
-    width: 150px;
+h1 {
+    font-size: 40pt;
+}
+
+#portfolio-link {
+    color:  rgb(65, 89, 105);
+    border-bottom: 2px solid rgb(65, 89, 105);
+}
+
+#blog-link {
+    color: rgb(65, 89, 105);
+    border-bottom: 2px solid rgb(65, 89, 105);
+}
+
+#portfolio-link:hover {
+    color:  rgb(131, 182, 216);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(131, 182, 216);
+}
+
+#blog-link:hover {
+    color: rgb(131, 182, 216);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(131, 182, 216);
+}
+
+#h2-1 {
+    margin-top: 40px;
+}
+
+#blog-card {
+    margin-top: 20px;
+    background-color: rgb(65, 89, 105);
+    height: 200px;
+}
+
+#github-card {
+    margin-top: 20px;
+    background-color: rgb(65, 89, 105);
+    height: 200px;
 }

@@ -10,23 +10,61 @@
   height: 50px;
 }
 
-#my-name {
-  color: white;
-  font-size: 32pt;
-  font-family: sans-serif;
-  padding-left: 5px;
-}
-
 body {
   background-color: #6890aa;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: white;
 }
 
 .container-fluid {
   padding: 0px;
 }
 
-#profile-pic {
-  height: 150px;
-  width: 150px;
+h1 {
+  font-size: 40pt;
+}
+
+#portfolio-link {
+  color: #415969;
+  border-bottom: 2px solid #415969;
+}
+
+#blog-link {
+  color: #415969;
+  border-bottom: 2px solid #415969;
+}
+
+#portfolio-link:hover {
+  color: #83b6d8;
+  text-decoration: none;
+  border-bottom: 2px solid #83b6d8;
+}
+
+#blog-link:hover {
+  color: #83b6d8;
+  text-decoration: none;
+  border-bottom: 2px solid #83b6d8;
+}
+
+#h2-1 {
+  margin-top: 40px;
+}
+
+#blog-card {
+  margin-top: 20px;
+  background-color: #415969;
+  height: 200px;
+}
+
+#github-card {
+  margin-top: 20px;
+  background-color: #415969;
+  height: 200px;
 }
 /*# sourceMappingURL=styles.css.map */
