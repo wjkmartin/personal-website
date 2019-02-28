@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Will Martin - Portfolio and Blog</title>
   </head>
@@ -14,7 +15,20 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12" id="header">
-          <div id="my-name"></span>
+          <div class="dropdown" id="nav">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                  <i class='fas fa-bars'></i>
+                </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId" id="dropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item disabled" href="#">Disabled action</a>
+              <h6 class="dropdown-header">Section header</h6>
+              <a class="dropdown-item" href="#">Action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">After divider action</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
