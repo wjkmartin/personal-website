@@ -1,74 +1,27 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="./stylesheets/styles.css">
-  <title>Will Martin - Portfolio and Blog</title>
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12" id="header">
-        <div class="dropdown" id="nav">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class='fas fa-bars'></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId" id="dropdown">
-            <a class="dropdown-item" href="/index.html">Home</a>
-
-            <a class="dropdown-item" href="/blog.html">Blog</a>
-
-            <a class="dropdown-item" href="/portfolio.html">Portfolio</a>
-
-            <a class="dropdown-item" href="/login.html">Login</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%- include _header %>
+  
   <div class="container-fluid" id="body-bg">
     <div class="row">
       <div class="col-sm-3">
-
+        <!-- empty -->
       </div>
 
       <div class="col-sm-6">
         <h1>I'm Will Martin.</h2>
           <h2>I'm currently learning to become a web developer.</h2>
-          <h2 id='h2-1'>If you'd like to follow my progress, check out my <a href="/portfolio.html" id='portfolio-link'>portfolio</a>
-            and <a href="/blog.html" id='blog-link'>blog</a>.</h2>
+          <h2 id='h2-1'>If you'd like to follow my progress, check out my <a href="/portfolio" id='portfolio-link'>portfolio</a>
+            and <a href="/blog" id='blog-link'>blog</a>.</h2>
           <h2 id='h2-1'>Here's the latest post from said blog:</h2>
           <div id="blog-card"></div>
           <h2 id="h2-1"> This is my Github feed. You'll find the source for this site there as well my personal
             projects that I work on for fun.</h2>
           <div id="github-card"></div>
       </div>
-      <div class="col-sm-3">
 
+      <div class="col-sm-3">
+        <!-- empty -->
       </div>
     </div>
   </div>
 
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+<%- include _footer %>
