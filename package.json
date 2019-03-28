@@ -8,13 +8,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "require-all": "^3.0.0"
   },
   "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-strongloop": "^2.1.0",
     "nodemon": "^1.18.10",
     "request": "^2.81.0",
     "tape": "^4.7.0"
