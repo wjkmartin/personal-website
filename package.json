@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
     "pretest": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
@@ -20,7 +20,9 @@
     "eslint": "^5.15.3",
     "eslint-config-strongloop": "^2.1.0",
     "nodemon": "^1.18.10",
+    "normalize-port": "^1.0.0",
     "request": "^2.81.0",
+    "require.all": "^2.0.4",
     "tape": "^4.7.0"
   },
   "repository": {
