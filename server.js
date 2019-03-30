@@ -20,7 +20,7 @@ app.use('/', adminRoutes);
 
 app.use((req, res) => res.status(404).render('404', {url: req.url}));
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = process.env.PORT || 3000;
 app.set('port', port);
 
 var server = http.createServer(app);
