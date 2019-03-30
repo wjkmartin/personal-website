@@ -4,7 +4,6 @@ const path = require('path');
 const express = require('express')
 const bodyParser = require('body-parser');
 const http = require('http');
-const normalizePort = require('normalize-port');
 const publicRoutes = require('./routes/public');
 const adminRoutes = require('./routes/admin');
 
