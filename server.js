@@ -15,7 +15,7 @@ app.use(express.static(path.resolve(__dirname, './static')));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', publicRoutes);
-app.use('/', adminRoutes);
+app.use('/admin', adminRoutes);
 
 app.use((req, res) => res.status(404).render('404', {url: req.url}));
 

@@ -5,9 +5,13 @@
   min-height: 200px;
 }
 
-#header {
+.main-header {
   background-color: #2b2a2a;
   height: 50px;
+}
+
+.dropdown-menu {
+  margin-right: 20px;
 }
 
 .dropdown-toggle {
@@ -19,8 +23,9 @@
   border-left: none;
 }
 
-.dropdown-menu {
-  margin-right: 20px;
+.dropdown-item {
+  width: 99%;
+  margin-left: 1px;
 }
 
 .btn {
@@ -43,25 +48,9 @@
   border: none;
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-}
-
-.btn-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn-secondary.dropdown-toggle:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.btn-secondary:active, .btn-secondary.active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle, .show > .btn-secondary.dropdown-toggle:focus {
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary,
+.show > .btn-secondary.dropdown-toggle:focus, .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-secondary.dropdown-toggle {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -94,31 +83,16 @@ h2 {
   color: white;
 }
 
-.container-fluid {
-  padding: 0px;
-}
-
 h1 {
   font-size: 40pt;
 }
 
-#portfolio-link {
+.link {
   color: #415969;
   border-bottom: 2px solid #415969;
 }
 
-#blog-link {
-  color: #415969;
-  border-bottom: 2px solid #415969;
-}
-
-#portfolio-link:hover {
-  color: #83b6d8;
-  text-decoration: none;
-  border-bottom: 2px solid #83b6d8;
-}
-
-#blog-link:hover {
+.link:hover {
   color: #83b6d8;
   text-decoration: none;
   border-bottom: 2px solid #83b6d8;
@@ -128,13 +102,7 @@ h1 {
   margin-top: 40px;
 }
 
-#blog-card {
-  margin-top: 20px;
-  background-color: #415969;
-  height: 200px;
-}
-
-#github-card {
+.card {
   margin-top: 20px;
   background-color: #415969;
   height: 200px;
@@ -149,6 +117,8 @@ h1 {
 
 #submit-login {
   width: 100%;
+  background: #007bff -webkit-gradient(linear, left top, left bottom, from(#70b3da), to(#334566)) repeat-x;
+  background: #007bff linear-gradient(#70b3da, #334566) repeat-x;
 }
 
 #username-input {
@@ -191,37 +161,13 @@ h1 {
   right: 2px;
 }
 
-#remember-me-checkbox {
-  -webkit-appearance: none;
-  border-radius: 3px;
-  background: #fff;
+.checkbox-remember-me {
   position: relative;
-  border: 1px solid #007bff;
-  cursor: pointer;
   top: 3px;
   left: 3px;
+  padding: 6px;
+  margin-right: 4px;
   height: 17px;
   width: 17px;
-}
-
-#remember-me-checkbox:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-#remember-me-checkbox input:checked ~ :after {
-  display: block;
-}
-
-#remember-me-checkbox:checked {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 /*# sourceMappingURL=styles.css.map */
