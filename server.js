@@ -10,7 +10,8 @@ const adminRoutes = require('./routes/admin');
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
-app.use(express.static(path.resolve(__dirname, './static')));
+app.use(express.static(path.resolve(__dirname, './public')));
+app.use(express.static(path.resolve(__dirname, './ckeditor')));
 
 app.use(bodyParser.urlencoded({extended: false}));
 

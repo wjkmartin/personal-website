@@ -1,0 +1,182 @@
+#left-col {
+    border-right-style: solid;
+    border-right-color: black;
+    border-width: 2px;
+    min-height: 200px;
+}
+
+.main-header {
+    background-color: rgb(43, 42, 42);
+    height: 50px;
+}
+
+.dropdown-menu {
+    margin-right: 20px;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border-color: #fff;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.dropdown-item {
+    width: 99%;
+    margin-left: 1px;
+}
+
+.btn {
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: none;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.active {
+    outline: 0 none;
+    border: none;
+}
+ 
+.btn-secondary {
+    background: none;
+    color: #ffffff;
+    border: none;
+}
+
+//messy but it works
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary,
+.show>.btn-secondary.dropdown-toggle:focus, .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active:focus, 
+.show>.btn-secondary.dropdown-toggle  { 
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+#nav {
+    color: white;
+    float: right;
+    background: none;
+    border: none;
+    margin-top: 9px;
+    margin-right: 10px;
+}
+
+#triggerId {
+    transform: scale(1.5);
+}
+
+body {
+    background-color: #6890aa;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    color: white;
+}
+
+.link {
+    color: rgb(65, 89, 105);
+    border-bottom: 2px solid rgb(65, 89, 105);
+}
+
+.link:hover {
+    color: rgb(131, 182, 216);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(131, 182, 216);
+}
+
+#h2-1 {
+    margin-top: 40px;
+}
+
+.card {
+    margin-top: 20px;
+    background-color: rgb(65, 89, 105);
+    height: 200px;
+}
+
+#login-col {
+    margin-top: 200px;
+    background-color: #ececec;
+    padding: 25px 20px 10px 20px;
+    max-width: 500px;
+}
+
+#submit-login {
+    width: 100%;
+    background: #007bff linear-gradient(#70b3da, #334566) repeat-x;
+}
+
+#username-input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding-left: 0;
+}
+
+#password-input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+#password-input-container {
+    position: relative;
+}
+
+#username-input-label {
+    position: relative;
+    top: 7px;
+}
+
+#password-input-label {
+    position: relative;
+    top: 7px;
+}
+
+#login-form-label {
+    position: relative;
+    text-align: center; 
+    top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21pt;
+    font-weight: 600;
+}
+
+#remember-me-group {
+    position: relative;
+    top: 6px;
+    right: 2px;
+}
+
+.checkbox {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    padding: 6px;
+    margin-right: 6px;
+    height: 16px;
+    width: 16px;
+}
+
+.center-block {
+    margin: 0 auto;
+    float: none;
+}
+
+#editor1 {
+    margin: auto auto;
+    float: none;
+    position: relative;
+    top: 200px;
+}
+
+.align-middle {
+    top-margin: 50px;
+}
