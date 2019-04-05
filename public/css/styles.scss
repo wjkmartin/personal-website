@@ -118,7 +118,6 @@ h2 {
 #username-input {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
-    padding-left: 0;
 }
 
 #password-input {
@@ -178,5 +177,39 @@ h2 {
 }
 
 .align-middle {
-    top-margin: 50px;
+    margin-top: 50px;
+}
+
+.button {
+
+}
+
+.blog-post {
+    background: #fff;
+    padding: 40px 40px;
+    margin: 30px;
+}
+
+.white-bg {
+    
+    padding: 0 !important;
+}
+
+.blog-post--title {
+    color: #333;
+}
+
+.blog-post--info {
+    position: relative;
+    left: 15px;
+    top: -10px;
+    font-size: 10pt;
+}
+
+.blog-post--image {
+    max-width: 100%;
+}
+
+.blog-post--body {
+    margin-top: 50px;
 }
