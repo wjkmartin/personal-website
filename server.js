@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', publicRoutes);
 app.use('/admin', adminRoutes);
 
-app.use((req, res) => res.status(404).render('404', {url: req.url}));
+app.use((req, res) => res.status(404).render('404', {url: req.url, docTitle: '404', path: '404'}));
 
 var port = process.env.PORT || 3000;
 app.set('port', port);
