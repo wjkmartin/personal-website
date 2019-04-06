@@ -13,24 +13,32 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid main-header">
     <div class="row">
-      <div class="col-12 main-header">
-        <div class="dropdown" id="nav">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class='fas fa-bars'></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId" id="dropdown">
-            <a class="dropdown-item" href="/index">Home</a>
-
-            <a class="dropdown-item" href="/blog">Blog</a>
-
-            <a class="dropdown-item" href="/portfolio">Portfolio</a>
-
-            <a class="dropdown-item" href="/login">Login</a>
-          </div>
-        </div>
+      <div class="col-10 main-header--col">
+        <a class="main-header--me caps" href="/">
+          <h1>Will Martin</h1>
+        </a>
+        <ul class="main-header--nav caps">
+          <a href="about">
+            <li class="<%= path==='about' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">about
+            </li>
+          </a>
+          <a href="blog">
+            <li class="<%= path==='blog' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">blog</li>
+          </a>
+          <a href="portfolio">
+            <li class="<%= path==='portfolio' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">portfolio</li>
+          </a>
+          <a href="contact">
+            <li class="<%= path==='contact' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">contact</li>
+          </a>
       </div>
     </div>
+    <div class="row">
+      <div class="col-10 main-header--col">
+        <p class="main-header--title">full stack web developer</p>
+      </div>
+    </div>
+
   </div>
