@@ -1,7 +1,7 @@
 'use strict';
-const app = require('./app')
+const app = require('./app');
 const path = require('path');
-const express = require('express')
+const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
 
@@ -16,7 +16,7 @@ app.set('views', path.resolve(__dirname, './views'));
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.static(path.resolve(__dirname, './ckeditor')));
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', publicRoutes);
 app.use('/admin', adminRoutes);
