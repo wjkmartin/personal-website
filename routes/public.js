@@ -1,43 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/', function(req, res) {
-	res.render('index', { docTitle: "Will Martin's Portfolio and Blog", path: 'index' });
-});
+const publicController = require('../controllers/publicController');
 
-router.get('/index', function(req, res) {
+router.get('/', publicController.getIndex);
+
+router.get('/index', (req, res, next) => {
 	res.redirect('/');
 });
 
-router.get('/blog', function(req, res) {
-	res.render('blog', {
-		docTitle: 'Will Martin | Blog',
-		path: 'blog',
-	});
-});
-
-router.get('/portfolio', function(req, res) {
-	res.render('portfolio', { 
-        docTitle: 'Will Martin | Portfolio', 
-        path: 'portfolio' });
-});
-
-router.get('/about', function(req, res) {
-	res.render('about', { 
-        docTitle: 'Will Martin | About', 
-        path: 'about' });
-});
-
-router.get('/contact', function(req, res) {
-	res.render('contact', { 
-        docTitle: 'Will Martin | Contact', 
-        path: 'contact' });
-});
-
-router.get('/login', function(req, res) {
-	res.render('login', { 
-        docTitle: 'Will Martin | Login',
-        path: 'login' });
-});
+router.get('/blog', publicController.getBlog);
+router.get('/portfolio', publicController.getPortfolio);
+router.get('/about', publicController.getAbout);
+router.get('/contact', publicController.getContact);
+router.get('/login', publicController.getLogin);
+router.get('/guestbook', publicController.getGuestbook);
+app.use((req, res) => res.status(404).render('404', {url: req.url, docTitle: '404', path: '404'}));
 
 module.exports = router;

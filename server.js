@@ -4,8 +4,11 @@ const path = require('path');
 const express = require('express')
 const bodyParser = require('body-parser');
 const http = require('http');
+
 const publicRoutes = require('./routes/public');
 const adminRoutes = require('./routes/admin');
+
+const publicController = require('./controllers/publicController');
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
@@ -18,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', publicRoutes);
 app.use('/admin', adminRoutes);
 
-app.use((req, res) => res.status(404).render('404', {url: req.url, docTitle: '404', path: '404'}));
+app.use(publicController.get404Page);
 
 var port = process.env.PORT || 3000;
 app.set('port', port);

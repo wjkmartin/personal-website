@@ -33,8 +33,12 @@ a:hover {
     color: white;
 }
 
-.container-fluid {
-   
+.link-on-white {
+    color: black;
+}
+
+.inline-block {
+    display: inline-block !important;
 }
 
 .row {
@@ -144,7 +148,7 @@ a:hover {
     max-width: 500px;
 }
 
-#submit-login {
+.button--submit {
     width: 100%;
     background: #007bff linear-gradient(#70b3da, #334566) repeat-x;
 }

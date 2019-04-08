@@ -30,6 +30,14 @@ a:hover {
   color: white;
 }
 
+.link-on-white {
+  color: black;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
 .row {
   height: 100%;
 }
@@ -147,7 +155,7 @@ a:hover {
   max-width: 500px;
 }
 
-#submit-login {
+.button--submit {
   width: 100%;
   background: #007bff -webkit-gradient(linear, left top, left bottom, from(#70b3da), to(#334566)) repeat-x;
   background: #007bff linear-gradient(#70b3da, #334566) repeat-x;
@@ -216,7 +224,6 @@ a:hover {
 
 .blog-post {
   background: #fff;
-  margin: 0;
 }
 
 .blog-post--title {

@@ -1,23 +1,22 @@
 <%- include _header %>
 
 <head>
-<script src="/ckeditor.js"></script>
+    <script type="text/javascript" src="/ckeditor.js"></script>
 </head>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-8 center-block">
             <h1> Create a new post </h1>
-            <form class="align-middle">
-                <textarea name="editor1" id="editor1" rows="10" cols="160">
-                            
-                        </textarea>
+            <form method="POST" class="align-middle">
+                <textarea name="editor1" id="editor1" rows="10" cols="160"> blag </textarea>
+
                 <script>
-                    // Replace the <textarea id="editor1"> with a CKEditor
-                    // instance, using default configuration.
                     CKEDITOR.replace('editor1');
                 </script>
-                <button type="button" id="" class="btn btn-primary button--preview-post" btn-lg btn-block">Preview Post</button>
+
+                <button type="submit" id="" class="btn btn-primary button--preview-post"> Preview
+                    Post </button>
             </form>
         </div>
     </div>
