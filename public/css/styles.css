@@ -216,6 +216,7 @@ a:hover {
 
 .blog-post {
   background: #fff;
+  margin: 0;
 }
 
 .blog-post--title {
