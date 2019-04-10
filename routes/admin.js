@@ -8,6 +8,8 @@ const blogPostingController = require('../controllers/blogPostingController');
  });
 
 router.get('/create-post', blogPostingController.getCreatePost);
+router.post('/create-post', blogPostingController.postCreatePost);
+
 router.get('/stage-post', blogPostingController.getStagePost);
 
 module.exports = router;

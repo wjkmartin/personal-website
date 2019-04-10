@@ -1,23 +1,40 @@
 <%- include _header %>
 
 <head>
-    <script type="text/javascript" src="/ckeditor.js"></script>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        function submitForm() {
+            let blogForm = document.getElementById('hiddenInput');
+            let quillContentsStringified = JSON.stringify(quill.getContents());
+            blogForm.value = quillContentsStringified;
+        }
+    </script>
 </head>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8 center-block">
+        <div class="center-block">
             <h1> Create a new post </h1>
-            <form method="POST" class="align-middle">
-                <textarea name="editor1" id="editor1" rows="10" cols="160"> blag </textarea>
+            <p>Title: </p>
+            <form onsubmit="submitForm()" id="form" class="blog-form" action="/admin/create-post" method="POST">
+                <div class="form-control">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="blog-post-title">
 
-                <script>
-                    CKEDITOR.replace('editor1');
-                </script>
+                    <div id="editor">
 
-                <button type="submit" id="" class="btn btn-primary button--preview-post"> Preview
-                    Post </button>
+                    </div>
+                    <button class="btn" type="submit">Stage Post</button>
+                    <script>
+                        var quill = new Quill('#editor', {
+                            theme: 'snow'
+                        });
+                    </script>
+                    <input id="hiddenInput" type="hidden" name="postBody" value="default" />
+                </div>
             </form>
+
         </div>
     </div>
 </div>

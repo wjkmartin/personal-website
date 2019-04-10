@@ -30,6 +30,10 @@ a:hover {
   color: white;
 }
 
+#editor {
+  height: 500px;
+}
+
 .link-on-white {
   color: black;
 }
