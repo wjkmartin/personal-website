@@ -23,8 +23,13 @@ module.exports = class BlogPost {
 		// 
 	}
 
-	static fetchLast() {
-        // const p = path.join(path.dirname(process.mainModule.filename), 'data', 'posts');
-		// fs.readdir(p, (err, items), )
+	static fetchLast(cb) {
+        const p = path.join(path.dirname(process.mainModule.filename), 'data', 'posts');
+		fs.readdir(p, (err, items) => {
+			const p2 = path.join(path.dirname(process.mainModule.filename), 'data', 'posts', items[items.length - 1]);
+			fs.readFile(p2, (err, fileContent) => {
+				cb(JSON.parse(fileContent));
+			});
+		});
 	}
-};
+}
