@@ -103,7 +103,7 @@ a:hover {
   padding-left: 1.25em;
   padding-right: 1.25em;
   padding-bottom: 8em;
-  max-width: 720px;
+  max-width: 1080px;
 }
 
 .main-header--nav {
@@ -251,5 +251,17 @@ a:hover {
 
 .blog-post--body {
   margin-top: 50px;
+}
+
+.create-post--button-stage-post {
+  background: #6890AA;
+}
+
+.create-post--page-title {
+  color: #333;
+}
+
+.create-post--form-container {
+  height: 50rem;
 }
 /*# sourceMappingURL=styles.css.map */
