@@ -33,23 +33,29 @@ module.exports = class BlogPost {
 		});
 	}
 
-	static fetchNthNewest(n, cb) {
+	static fetchNNewest(n, cb) {
+		let posts = [];
 		const p = path.join(path.dirname(process.mainModule.filename), 'data', 'posts');
 		fs.readdir(p, (err, items) => {
 			if (err) {
 				console.log(err);
 				cb([]);
 			} else {
-				const p2 = path.join(
-					path.dirname(process.mainModule.filename),
-					'data',
-					'posts',
-					items[items.length - (n + 1)]
-				);
-				fs.readFile(p2, (err, fileContent) => {
-					let foo = JSON.parse(fileContent)
-					cb(foo);
-				});
+				for (let i = 0; i < 1; i++) {
+					const p2 = path.join(
+						path.dirname(process.mainModule.filename),
+						'data',
+						'posts',
+						items[items.length - (i + 1)]
+					);
+					fs.readFile(p2, (err, fileContent) => {
+						let foo = JSON.parse(fileContent);
+						
+						posts.push(foo);
+					});
+				}
+				
+				cb(posts);
 			}
 		});
 	}

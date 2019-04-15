@@ -7,35 +7,18 @@ exports.getIndex = (req, res, next) => {
 	});
 };
 
-exports.getBlog = {
-	getData: async function(req, res, next) {
-
-		res.locals.test = [];
-		for (let i = 0; i < 1; i++) {
-			BlogPost.fetchNthNewest(i, post => {
-				res.locals.test.push(post);
+exports.getBlog = (req, res, next) => {
+	BlogPost.fetchNNewest(1, posts => {
+		setTimeout(function() {
+			res.render('blog', {
+				docTitle: 'Will Martin | Blog',
+				path: 'blog',
+				blogPost1Title: posts[0].title,
+				blogPost1TimeStamp: 'February 10',
+				blogPost1Body: posts[0].body,
 			});
-		}
-		await new Promise((resolve, reject) => setTimeout(resolve, 300));
-		next();
-
-	},
-	renderData: function(req, res, next) {
-		console.log( res.locals.test[0].title);
-		res.render('blog', {
-			docTitle: 'Will Martin | Blog',
-			path: 'blog',
-			blogPost1Title: res.locals.test[0].title,
-			blogPost1TimeStamp: 'February 10',
-			blogPost1Body: res.locals.test[0].body,
-			// blogPost2Title: res.locals.test[1].title,
-			// blogPost2TimeStamp: 'February 10',
-			// blogPost2Body: res.locals.test[1].body,
-			// blogPost3Title: res.locals.test[2].title,
-			// blogPost3TimeStamp: 'February 10',
-			// blogPost3Body: res.locals.test[2].body
-		});
-	}
+		}, 5);
+	});
 };
 
 exports.getPortfolio = (req, res, next) => {
