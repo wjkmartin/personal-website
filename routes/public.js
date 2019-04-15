@@ -9,7 +9,7 @@ router.get('/index', (req, res, next) => {
 	res.redirect('/');
 });
 
-router.get('/blog', publicController.getBlog);
+router.get('/blog', [publicController.getBlog.getData, publicController.getBlog.renderData]);
 router.get('/portfolio', publicController.getPortfolio);
 router.get('/about', publicController.getAbout);
 router.get('/contact', publicController.getContact);
