@@ -1,17 +1,27 @@
 const fs = require('fs');
 const path = require('path');
 
+function comparePosts(a, b) {
+	console.log("in sort post")
+	console.log(a.id + b.id)
+	return b.id - a.id; 
+}
+
 module.exports = class BlogPost {
 	constructor(title, body) {
 		this.title = title;
 		this.body = body;
+		let date = new Date();
+		this.date = date.toString().slice(0, 15);
 		this.id = Date.now();
 	}
 
 	save() {
 		const p = path.join(path.dirname(process.mainModule.filename), 'data', 'posts', `${this.id}.json`);
 		let post = {
+			id: this.id,
 			title: this.title,
+			date: this.date,
 			body: this.body,
 		};
 		fs.writeFile(p, JSON.stringify(post), err => {
@@ -41,21 +51,25 @@ module.exports = class BlogPost {
 				console.log(err);
 				cb([]);
 			} else {
-				for (let i = 0; i < 1; i++) {
+				for (let i = 0; i < n; i++) {
 					const p2 = path.join(
 						path.dirname(process.mainModule.filename),
 						'data',
 						'posts',
 						items[items.length - (i + 1)]
 					);
+
 					fs.readFile(p2, (err, fileContent) => {
-						let foo = JSON.parse(fileContent);
 						
+						let foo = JSON.parse(fileContent);
 						posts.push(foo);
 					});
 				}
+				setTimeout(function() {
+					posts = posts.sort(comparePosts)
+					cb(posts);
+				}, 5);
 				
-				cb(posts);
 			}
 		});
 	}

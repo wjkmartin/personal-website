@@ -16,6 +16,9 @@ exports.postCreatePost = (req, res, next) => {
 	const html = converter.convert();
 
 	const post = new BlogPost(req.body.title, html);
+
+	
+
 	post.save();
 	res.redirect('stage-post');
 };
@@ -26,6 +29,7 @@ exports.getStagePost = (req, res, next) => {
 			docTitle: 'Will Martin | Verify new blog post',
 			path: 'stage-post',
 			postTitle: post.title,
+			postDate: post.date,
 			postBody: post.body,
 		});
 	});
