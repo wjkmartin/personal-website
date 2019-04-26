@@ -8,9 +8,10 @@ function comparePosts(a, b) {
 }
 
 module.exports = class BlogPost {
-	constructor(title, body) {
+	constructor(title, body, imageURL) {
 		this.title = title;
 		this.body = body;
+		this.imageURL = imageURL;
 		let date = new Date();
 		this.date = date.toString().slice(0, 15);
 		this.id = Date.now();
@@ -28,11 +29,7 @@ module.exports = class BlogPost {
 			console.log(err);
 		});
 	}
-
-	static fetchAll() {
-		//
-	}
-
+	
 	static fetchLast(cb) {
 		const p = path.join(path.dirname(process.mainModule.filename), 'data', 'posts');
 		fs.readdir(p, (err, items) => {

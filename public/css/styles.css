@@ -3,7 +3,6 @@ ul {
 }
 
 h1 {
-  color: white;
   font-size: 30px;
   margin: 0;
   border: none;
@@ -263,5 +262,13 @@ a:hover {
 
 .create-post--form-container {
   height: 50rem;
+}
+
+.body--link {
+  color: black;
+}
+
+.body--link:hover {
+  color: #6890AA;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -8,21 +8,16 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getBlog = (req, res, next) => {
-	let postsToShow = 3;
+	let postsToShow = 1;
 	let renderObject = {
 		docTitle: 'Will Martin | Blog',
 		path: 'blog',
 		postsToShow: postsToShow,
 	};
 
-	BlogPost.fetchNNewest(3, posts => {
+	BlogPost.fetchNNewest(postsToShow, _posts => {
 		setTimeout(function() {
-			for (let n = 0; n < postsToShow; n++) {
-				renderObject['post' + (n + 1) + 'Title'] = posts[n].title;
-				renderObject['post' + (n + 1) + 'Date'] = posts[n].title;
-				renderObject['post' + (n + 1) + 'Body'] = posts[n].title;
-			}
-			console.log(renderObject);
+			renderObject['posts'] = _posts;
 			res.render('blog', renderObject);
 		}, 30);
 	});

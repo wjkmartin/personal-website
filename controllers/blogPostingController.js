@@ -17,8 +17,6 @@ exports.postCreatePost = (req, res, next) => {
 
 	const post = new BlogPost(req.body.title, html);
 
-	
-
 	post.save();
 	res.redirect('stage-post');
 };
