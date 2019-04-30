@@ -26,6 +26,9 @@ exports.postCreatePost = (req, res, next) => {
 	.then(() => {
 		console.log('redirecting to stage post')
 		res.redirect('stage-post');
+	})
+	.catch(err => {
+		console.log(err);
 	});
 	
 };
@@ -37,5 +40,8 @@ exports.getStagePost = (req, res, next) => {
 			path: 'stage-post',
 			posts: posts,
 		});
+	})
+	.catch(err => {
+		console.log(err);
 	});
 };
