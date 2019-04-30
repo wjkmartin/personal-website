@@ -138,12 +138,6 @@ a:hover {
     border-bottom: 2px solid rgb(131, 182, 216);
 }
 
-.card {
-    margin-top: 20px;
-    background-color: rgb(65, 89, 105);
-    height: 200px;
-}
-
 #login-col {
     margin-top: 200px;
     background-color: #ececec;
@@ -271,6 +265,16 @@ a:hover {
     color: #6890AA;
 }
 
+.blogCards {
+    display: flex;
+    justify-content: space-around;
+    direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-top: 1em
+}
 
 
 

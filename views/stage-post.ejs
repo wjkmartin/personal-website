@@ -5,18 +5,18 @@
         <div class="col-middle">
             <div class="blog-post">
                 <div class="blog-post--header">
-                    <h1 class="blog-post--title"><%= postTitle %></h1>
+                    <h1 class="blog-post--title"><%= posts[posts.length - 1].title %></h1>
                 </div>
                 <div class="blog-post--info">
                     <p>
-                        posted <%= postDate %> by William Martin
+                        posted <%= posts[posts.length - 1].date %> by William Martin
                     </p>
                 </div>
                 <div>
                     <img class="blog-post--image" src="https://via.placeholder.com/700x500" alt="">
                 </div>
                 <div class="blog-post--body">
-                    <%- postBody %>
+                    <%- posts[posts.length - 1].body %>
                 </div>
             </div>
         </div>

@@ -10,6 +10,8 @@ const adminRoutes = require('./routes/admin');
 
 const publicController = require('./controllers/publicController');
 
+const mongoConnect = require('./util/database').mongoConnect;
+
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
@@ -25,7 +27,12 @@ app.use(publicController.get404Page);
 
 var port = process.env.PORT || 3000;
 app.set('port', port);
-
 var server = http.createServer(app);
 
-server.listen(port);
+mongoConnect(() => {
+    server.listen(port);
+});
+
+
+
+

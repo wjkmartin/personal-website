@@ -8,19 +8,18 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getBlog = (req, res, next) => {
-	let postsToShow = 1;
-	let renderObject = {
-		docTitle: 'Will Martin | Blog',
-		path: 'blog',
-		postsToShow: postsToShow,
-	};
-
-	BlogPost.fetchNNewest(postsToShow, _posts => {
-		setTimeout(function() {
-			renderObject['posts'] = _posts;
-			res.render('blog', renderObject);
-		}, 30);
+	BlogPost.fetchAll().then(posts => {
+		res.render('blog', {
+			docTitle: 'Will Martin | Blog',
+			path: 'blog',
+			posts: posts,
+			postsToShow: 6
+		});
 	});
+};
+
+exports.getBlogDetail = (req, res, next) => {
+
 };
 
 exports.getPortfolio = (req, res, next) => {
