@@ -10,6 +10,8 @@ router.get('/index', (req, res, next) => {
 });
 
 router.get('/blog', publicController.getBlog);
+router.post('/blog', publicController.postViewBlogDetail);
+
 router.get('/portfolio', publicController.getPortfolio);
 router.get('/about', publicController.getAbout);
 router.get('/contact', publicController.getContact);

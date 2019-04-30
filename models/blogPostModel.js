@@ -4,6 +4,16 @@ class BlogPost {
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.body = body;
+		const summarize = body => {
+			let summary = body;
+			if (summary.length > 120) {
+				summary = summary.slice(0,120);
+				summary += '...';
+				return summary; 
+			}
+			else {return body };
+		};
+		this.bodySummary = summarize(body);
 		this.tags = tags;
 		let date = new Date();
 		this.timestamp = date.toString().slice(0, 15);

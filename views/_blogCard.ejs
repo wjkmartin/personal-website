@@ -2,7 +2,10 @@
     <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"> <%= posts[n].title %> </h5>
-      <p class="card-text"><%- posts[n].body %></p>
-      <a href="/blog-detail" class="btn btn-primary">View</a>
+      <p class="card-text"><%- posts[n].bodySummary %></p>
+      <form action"/blog" method="POST">
+        <button class="btn" type="submit">Read this post</button>
+        <input type="hidden" name="blogId" value="<%= posts[n]._id %>">
+      </form>
     </div>
   </div>

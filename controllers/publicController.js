@@ -18,6 +18,10 @@ exports.getBlog = (req, res, next) => {
 	});
 };
 
+exports.postViewBlogDetail = (req, res, next) => {
+	console.log(req.body.blogId);
+}
+
 exports.getBlogDetail = (req, res, next) => {
 
 };
