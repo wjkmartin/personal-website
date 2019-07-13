@@ -45,3 +45,20 @@ exports.getStagePost = (req, res, next) => {
 		console.log(err);
 	});
 };
+
+exports.getEditPosts = (req, res, next) => {
+	BlogPost.fetchAll().then(posts => {
+		res.render('edit-posts', {
+			docTitle: 'Will Martin | Edit Blog',
+			path: 'edit-posts',
+			posts: posts,
+			postsToShow: 6
+		});
+	});
+};
+
+exports.getBlogDetailAdmin = (req, res, next) => {
+	
+}
+
+

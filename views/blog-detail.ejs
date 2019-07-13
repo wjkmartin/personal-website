@@ -3,7 +3,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-10 col-middle">
-            <a class='link-on-white' href="admin/create-post">Create post</a>
+            <h1> <%= post.title %> </h1>
+            <div class="image">
+                <img src="<%= post.imageUrl %>" alt="<%= post.title %>"> 
+            </div>
+            <p><%- post.body %></p>
+
         </div>
     </div>    
 </div>

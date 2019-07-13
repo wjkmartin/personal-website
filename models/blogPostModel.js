@@ -1,4 +1,5 @@
 const getDb = require('../util/database').getDb;
+const ObjectId = require('mongodb').ObjectId;
 class BlogPost {
 	constructor(title, imageUrl, body, tags) {
 		this.title = title;
@@ -40,6 +41,21 @@ class BlogPost {
 			.toArray()
 			.then(posts => {
 				return posts;
+			})
+			.catch(err => {
+				console.log(err);
+			});
+	}
+
+	static fetchById(id) {
+		const db = getDb();
+		let objectId = new ObjectId(id);
+		return db
+			.collection('posts')
+			.find({ "_id": objectId })
+			.toArray()
+			.then(post => {
+				return post;
 			})
 			.catch(err => {
 				console.log(err);

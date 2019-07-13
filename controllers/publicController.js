@@ -13,17 +13,25 @@ exports.getBlog = (req, res, next) => {
 			docTitle: 'Will Martin | Blog',
 			path: 'blog',
 			posts: posts,
-			postsToShow: 6
+			postsToShow: 1,
 		});
 	});
 };
 
 exports.postViewBlogDetail = (req, res, next) => {
-	console.log(req.body.blogId);
-}
+	let id = req.body.blogId;
+	res.redirect('/blog/' + id);
+};
 
 exports.getBlogDetail = (req, res, next) => {
-
+	let id = req.params.blogId;
+	BlogPost.fetchById(id).then(post => {
+		res.render('blog-detail', {
+			docTitle: 'Will Martin | Verify new blog post',
+			path: 'blog',
+			post: post[0],
+		});
+	});
 };
 
 exports.getPortfolio = (req, res, next) => {

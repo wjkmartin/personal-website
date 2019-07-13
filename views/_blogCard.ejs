@@ -4,7 +4,7 @@
       <h5 class="card-title"> <%= posts[n].title %> </h5>
       <p class="card-text"><%- posts[n].bodySummary %></p>
       <form action"/blog" method="POST">
-        <button class="btn" type="submit">Read this post</button>
+        <button class="btn btn--blog-detail" type="submit"><span class="btn--blog-detail-text">Read this post</span></button>
         <input type="hidden" name="blogId" value="<%= posts[n]._id %>">
       </form>
     </div>
