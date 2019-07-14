@@ -10,14 +10,15 @@ h1 {
 
 body {
   background-color: #6890aa;
-  font-family: Montserrat,helvetica neue,Helvetica,Arial,sans-serif;
-  font-feature-settings: 'kern' 1;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
+  font-family: Montserrat, helvetica neue, Helvetica, Arial, sans-serif;
+  font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
   color: #2e2e2e;
   letter-spacing: .01rem;
   line-height: 1.75rem;
+  width: 100%;
 }
 
 a {
@@ -77,10 +78,14 @@ a:hover {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-family: Montserrat,helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: Montserrat, helvetica neue, Helvetica, Arial, sans-serif;
   position: relative;
   padding: 0 1rem;
   bottom: 1.4rem;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .caps {
@@ -106,6 +111,7 @@ a:hover {
 }
 
 .main-header--nav {
+  visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +133,32 @@ a:hover {
 .main-header--nav-item:hover {
   border: none;
   background: #505050;
+}
+
+.small-nav {
+  background: #2b2a2a !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.small-nav:hover {
+  background: #505050;
+}
+
+.dropdown-menu {
+  background: #3a3939 !important;
+  border: none !important;
+  left: -10px !important;
+  min-width: 8rem !important;
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+.dropdown-item:hover {
+  background: #2b2a2a !important;
 }
 
 .active {
@@ -292,5 +324,53 @@ a:hover {
 .btn--blog-detail-text {
   color: white;
   font-size: 11pt;
+}
+
+.main-header--name {
+  font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.bg-img {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.tagline {
+  color: white;
+  font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
+  font-style: normal;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  .tagline {
+    margin: 30px auto;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tagline {
+    margin: 150px auto;
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 900px) {
+  .tagline {
+    margin: 100px auto;
+    font-size: 60px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
