@@ -346,11 +346,22 @@ a:hover {
   z-index: -1;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .tagline {
   color: white;
   font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
   font-style: normal;
   position: relative;
+  text-shadow: 1px 1px #000000;
 }
 
 @media (max-width: 599px) {
@@ -371,6 +382,36 @@ a:hover {
   .tagline {
     margin: 100px auto;
     font-size: 60px;
+  }
+}
+
+.tagline-sub {
+  color: white;
+  font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
+  font-style: normal;
+  position: relative;
+  text-shadow: 1px 1px #000000;
+}
+
+@media (max-width: 599px) {
+  .tagline-sub {
+    margin: auto;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tagline-sub {
+    margin: auto;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 900px) {
+  .tagline-sub {
+    margin: auto;
+    top: -30px;
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

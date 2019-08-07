@@ -362,17 +362,25 @@ a:hover {
     z-index: -1;
 }
 
+.row {
+    display: flex;
+    flex-direction: column;
+
+}
+
 .tagline {
     color: white;
     font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
     font-style: normal;
     position: relative;
+    text-shadow:
+        1px 1px #000000;
 
     @include for-phone-only {
         margin: 30px auto;
         font-size: 30px;
     }
-    
+
 
     @include for-desktop-up {
         margin: 150px auto;
@@ -383,5 +391,31 @@ a:hover {
         margin: 100px auto;
         font-size: 60px;
     }
+}
 
+.tagline-sub {
+    color: white;
+    font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
+    font-style: normal;
+    position: relative;
+    text-shadow:
+        1px 1px #000000;
+
+
+    @include for-phone-only {
+        margin: auto;
+        font-size: 15px;
+    }
+
+
+    @include for-desktop-up {
+        margin: auto;
+        font-size: 25px;
+    }
+
+    @include for-tablet-landscape-up {
+        margin: auto;
+        top: -30px;
+        font-size: 25px;
+    }
 }
