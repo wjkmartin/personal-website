@@ -76,44 +76,6 @@ a:hover {
     height: 100%;
 }
 
-.main-header {
-    background-color: rgb(43, 42, 42);
-    height: 4rem;
-    border: none !important;
-}
-
-.main-header--col {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: 100%;
-}
-
-.main-header--me {
-    font-size: 30px;
-    padding: .5rem 1rem;
-}
-
-.main-header--me:hover {
-    border: none;
-    background: #505050;
-}
-
-.main-header--title {
-    color: white;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-family: Montserrat, helvetica neue, Helvetica, Arial, sans-serif;
-    position: relative;
-    padding: 0 1rem;
-    bottom: 1.4rem;
-    -webkit-user-select: none;
-    -moz-user-select: -moz-none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 .caps {
     text-transform: uppercase;
     letter-spacing: .2em;
@@ -135,12 +97,28 @@ a:hover {
 }
 
 .main-header--nav {
-    visibility: hidden;
     display: flex;
     justify-content: space-around;
     padding-inline-start: 0;
     margin: auto 0;
     height: 100%;
+
+    @include for-phone-only {
+        visibility: hidden;
+    }
+}
+
+.small-nav {
+    visibility: hidden;
+    @include for-phone-only {
+        visibility: visible;
+    }
+}
+
+.main-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-header--nav-item {
@@ -153,6 +131,33 @@ a:hover {
 .main-header--nav-item:hover {
     border: none;
     background: #505050;
+}
+
+.header-main {
+    width: 100%;
+    background-color: #2b2a2a;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-main--name {
+    line-height: 60px;
+    color: white !important;
+
+    font-family: 'Fjalla One', sans-serif;
+
+    @include for-phone-only {
+        font-size: 15px;
+    }
+    @include for-desktop-up {
+
+        font-size: 25px;
+    }
+
+    @include for-tablet-landscape-up {
+        font-size: 38px;
+    }
+    
 }
 
 .small-nav {
@@ -341,13 +346,6 @@ a:hover {
     font-size: 11pt;
 }
 
-
-.main-header--name {
-    font-family: 'neuzeitgroteskcondw01-blackRg', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-}
-
 .bg-img {
     display: inline-block;
     position: absolute;
@@ -360,12 +358,6 @@ a:hover {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: -1;
-}
-
-.row {
-    display: flex;
-    flex-direction: column;
-
 }
 
 .tagline {
@@ -419,3 +411,4 @@ a:hover {
         font-size: 25px;
     }
 }
+

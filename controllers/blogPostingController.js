@@ -24,7 +24,7 @@ exports.postCreatePost = (req, res, next) => {
 
 	post.save()
 	.then(() => {
-		console.log('redirecting to stage post')
+		console.log('redirecting to stage post');
 		res.redirect('stage-post');
 	})
 	.catch(err => {
@@ -59,6 +59,6 @@ exports.getEditPosts = (req, res, next) => {
 
 exports.getBlogDetailAdmin = (req, res, next) => {
 	
-}
+};
 
 

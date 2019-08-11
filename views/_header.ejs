@@ -9,51 +9,44 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
   <link href="\fonts\stylesheet.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container-fluid main-header">
-    <div class="row">
-      <div class="col-10 main-header--col">
-        <a class="main-header--me caps" href="/">
-          <h1 class="main-header--name">Will Martin</h1>
+  <div class="header-main">
+    <div class="header-main--left-col">
+      <a class="header-main--name" href='/index'>WILL MARTIN</a>
+    </div>
+    <div class="header-main--right-col">
+      <ul class="main-header--nav caps">
+        <a href="/about">
+          <li class="<%= path==='about' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">about
+          </li>
         </a>
-        <ul class="main-header--nav caps">
-          <a href="/about">
-            <li class="<%= path==='about' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">about
-            </li>
-          </a>
-          <a href="/blog">
-            <li class="<%= path==='blog' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">blog</li>
-          </a>
-          <a href="/portfolio">
-            <li class="<%= path==='portfolio' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">portfolio
-            </li>
-          </a>
-          <a href="/contact">
-            <li class="<%= path==='contact' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">contact</li>
-          </a>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle small-nav" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="/about">about</a>
-          <a class="dropdown-item" href="/blog">blog</a>
-          <a class="dropdown-item" href="/portfolio">portfolio</a>
-          <a class="dropdown-item" href="/contact">contact</a>
+        <a href="/blog">
+          <li class="<%= path==='blog' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">blog</li>
+        </a>
+        <a href="/portfolio">
+          <li class="<%= path==='portfolio' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">portfolio
+          </li>
+        </a>
+        <a href="/contact">
+          <li class="<%= path==='contact' ? 'active main-header--nav-item' : 'main-header--nav-item' %>">contact</li>
+        </a>
+        <div class="btn-group small-nav">
+          <button type="button" class="btn btn-secondary dropdown-toggle small-nav" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="/about">about</a>
+            <a class="dropdown-item" href="/blog">blog</a>
+            <a class="dropdown-item" href="/portfolio">portfolio</a>
+            <a class="dropdown-item" href="/contact">contact</a>
+          </div>
         </div>
-      </div>
+      </ul>
     </div>
-
-    <div class="row">
-      <div class="col-10 main-header--col">
-        <p class="main-header--title">full stack web developer</p>
-      </div>
-    </div>
-
   </div>
