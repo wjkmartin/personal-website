@@ -106,10 +106,20 @@ a:hover {
     @include for-phone-only {
         visibility: hidden;
     }
+
+    @include for-desktop-up {
+
+        visibility: visible;
+    }
+
+    @include for-tablet-landscape-up {
+        visibility: visible;
+    }
 }
 
 .small-nav {
     visibility: hidden;
+
     @include for-phone-only {
         visibility: visible;
     }
@@ -149,6 +159,7 @@ a:hover {
     @include for-phone-only {
         font-size: 15px;
     }
+
     @include for-desktop-up {
 
         font-size: 25px;
@@ -157,7 +168,7 @@ a:hover {
     @include for-tablet-landscape-up {
         font-size: 38px;
     }
-    
+
 }
 
 .small-nav {
@@ -368,21 +379,9 @@ a:hover {
     text-shadow:
         1px 1px #000000;
 
-    @include for-phone-only {
-        margin: 30px auto;
-        font-size: 30px;
-    }
-
-
-    @include for-desktop-up {
-        margin: 150px auto;
-        font-size: 70px;
-    }
-
-    @include for-tablet-landscape-up {
-        margin: 100px auto;
-        font-size: 60px;
-    }
+    font-size: 50px;
+    margin: 40px 0;
+    
 }
 
 .tagline-sub {
@@ -392,23 +391,47 @@ a:hover {
     position: relative;
     text-shadow:
         1px 1px #000000;
-
+    text-align: center;
 
     @include for-phone-only {
-        margin: auto;
-        font-size: 15px;
+        font-size: 20px;
     }
 
-
     @include for-desktop-up {
-        margin: auto;
-        font-size: 25px;
+        font-size: 40px;
     }
 
     @include for-tablet-landscape-up {
-        margin: auto;
-        top: -30px;
-        font-size: 25px;
+        font-size: 40px;
     }
+}
+
+
+.homepage-body {
+    min-height: 600px;
+    min-width: 800px;
+    max-width: 1920px;
+    max-height: 892px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.homepage-body--text-container {
+    max-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-height: 600px;
+    min-width: 800px;
+    max-width: 1920px;
+    max-height: 892px;
 }
 

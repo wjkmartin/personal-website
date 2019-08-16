@@ -86,6 +86,18 @@ a:hover {
   }
 }
 
+@media (min-width: 1200px) {
+  .main-header--nav {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 900px) {
+  .main-header--nav {
+    visibility: visible;
+  }
+}
+
 .small-nav {
   visibility: hidden;
 }
@@ -366,27 +378,8 @@ a:hover {
   font-style: normal;
   position: relative;
   text-shadow: 1px 1px #000000;
-}
-
-@media (max-width: 599px) {
-  .tagline {
-    margin: 30px auto;
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .tagline {
-    margin: 150px auto;
-    font-size: 70px;
-  }
-}
-
-@media (min-width: 900px) {
-  .tagline {
-    margin: 100px auto;
-    font-size: 60px;
-  }
+  font-size: 50px;
+  margin: 40px 0;
 }
 
 .tagline-sub {
@@ -395,27 +388,64 @@ a:hover {
   font-style: normal;
   position: relative;
   text-shadow: 1px 1px #000000;
+  text-align: center;
 }
 
 @media (max-width: 599px) {
   .tagline-sub {
-    margin: auto;
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1200px) {
   .tagline-sub {
-    margin: auto;
-    font-size: 25px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 900px) {
   .tagline-sub {
-    margin: auto;
-    top: -30px;
-    font-size: 25px;
+    font-size: 40px;
   }
+}
+
+.homepage-body {
+  min-height: 600px;
+  min-width: 800px;
+  max-width: 1920px;
+  max-height: 892px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.homepage-body--text-container {
+  max-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 600px;
+  min-width: 800px;
+  max-width: 1920px;
+  max-height: 892px;
 }
 /*# sourceMappingURL=styles.css.map */

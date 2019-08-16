@@ -23,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', publicRoutes);
 app.use('/admin', adminRoutes);
 
+app.use(express.static("./public/img"));
+
 app.use(publicController.get404Page);
 
 var port = process.env.PORT || 3000;
