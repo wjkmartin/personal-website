@@ -39,7 +39,7 @@ h1 {
 }
 
 body {
-    background-color: #6890aa;
+    background-color: #3870BA;
     font-family: Montserrat, helvetica neue, Helvetica, Arial, sans-serif;
     font-feature-settings: 'kern'1;
     -webkit-font-feature-settings: 'kern'1;
@@ -104,24 +104,25 @@ a:hover {
     height: 100%;
 
     @include for-phone-only {
-        visibility: hidden;
+        display: none;
     }
 
     @include for-desktop-up {
 
-        visibility: visible;
+        display: none;
     }
 
     @include for-tablet-landscape-up {
-        visibility: visible;
+        display: flex;
     }
 }
 
 .small-nav {
-    visibility: hidden;
+    margin-left: 55px;
+    display: none;
 
     @include for-phone-only {
-        visibility: visible;
+        display: flex !important;
     }
 }
 
@@ -381,7 +382,7 @@ a:hover {
 
     font-size: 50px;
     margin: 40px 0;
-    
+
 }
 
 .tagline-sub {
@@ -406,13 +407,13 @@ a:hover {
     }
 }
 
+.tagline-sub2 {
+    margin-top: .5rem;
+}
+
 
 .homepage-body {
-    min-height: 600px;
-    min-width: 800px;
-    max-width: 1920px;
-    max-height: 892px;
-
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -429,9 +430,11 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
 
-    min-height: 600px;
-    min-width: 800px;
-    max-width: 1920px;
-    max-height: 892px;
-}
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+        min-height: 600px;
+        max-height: 892px;
+}

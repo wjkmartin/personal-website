@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-  background-color: #6890aa;
+  background-color: #3870BA;
   font-family: Montserrat, helvetica neue, Helvetica, Arial, sans-serif;
   font-feature-settings: "kern" 1;
   -webkit-font-feature-settings: "kern" 1;
@@ -82,29 +82,34 @@ a:hover {
 
 @media (max-width: 599px) {
   .main-header--nav {
-    visibility: hidden;
+    display: none;
   }
 }
 
 @media (min-width: 1200px) {
   .main-header--nav {
-    visibility: visible;
+    display: none;
   }
 }
 
 @media (min-width: 900px) {
   .main-header--nav {
-    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 .small-nav {
-  visibility: hidden;
+  margin-left: 55px;
+  display: none;
 }
 
 @media (max-width: 599px) {
   .small-nav {
-    visibility: visible;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 
@@ -409,11 +414,12 @@ a:hover {
   }
 }
 
+.tagline-sub2 {
+  margin-top: .5rem;
+}
+
 .homepage-body {
-  min-height: 600px;
-  min-width: 800px;
-  max-width: 1920px;
-  max-height: 892px;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,9 +449,8 @@ a:hover {
   background-image: url("/img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   min-height: 600px;
-  min-width: 800px;
-  max-width: 1920px;
   max-height: 892px;
 }
 /*# sourceMappingURL=styles.css.map */
