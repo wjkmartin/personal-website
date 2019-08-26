@@ -1,11 +1,11 @@
 <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title"> <%= posts[n].title %> </h5>
-      <p class="card-text"><%- posts[n].bodySummary %></p>
+      <h5 class="card-title"> <%= (posts[n] != undefined ? posts[n].title:'') %> </h5>
+      <p class="card-text"><%- (posts[n] != undefined ? posts[n].bodySummary:'') %></p>
       <form action"/blog" method="POST">
         <button class="btn btn--blog-detail" type="submit"><span class="btn--blog-detail-text">Read this post</span></button>
-        <input type="hidden" name="blogId" value="<%= posts[n]._id %>">
+        <input type="hidden" name="blogId" value="<%= (posts[n] != undefined ? posts[n]._id:'') %>">
       </form>
     </div>
   </div>

@@ -13,7 +13,8 @@ exports.getBlog = (req, res, next) => {
 			docTitle: 'Will Martin | Blog',
 			path: 'blog',
 			posts: posts,
-			postsToShow: 1,
+			postsPerPage: 6,
+			postsToShow: posts.length,
 		});
 	});
 };

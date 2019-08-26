@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-  background-color: #3870BA;
+  background-color: #284b79;
   font-family: Montserrat, helvetica neue, Helvetica, Arial, sans-serif;
   font-feature-settings: "kern" 1;
   -webkit-font-feature-settings: "kern" 1;
@@ -64,7 +64,7 @@ a:hover {
   margin-right: auto;
   padding-left: 1.25em;
   padding-right: 1.25em;
-  padding-bottom: 8em;
+  padding-bottom: 20px;
   max-width: 1080px;
 }
 
@@ -328,7 +328,7 @@ a:hover {
 }
 
 .body--link {
-  color: black;
+  color: #2c58e7;
 }
 
 .body--link:hover {
@@ -452,5 +452,17 @@ a:hover {
   background-size: cover;
   min-height: 600px;
   max-height: 892px;
+}
+
+.resume-link {
+  color: #003b4d;
+}
+
+.portfolio--card-title {
+  padding-bottom: 10px;
+}
+
+.portfolio--card-body {
+  padding-top: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
