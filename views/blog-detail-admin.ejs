@@ -7,16 +7,16 @@
             <div class="image">
                 <img src="<%= post.imageUrl %>" alt="<%= post.title %>">
             </div>
-            <p>post.body</p>
+            <p><%- post.body %></p>
 
-            <form action"/blog" method="POST">
+            <form action="/admin/blog-detail-admin" method="POST">
                 <button class="btn btn--blog-detail" type="submit"><span class="btn--blog-detail-text">
                     Modify Post
                 </span></button>
                 <input type="hidden" name="blogId" value="<%= post._id %>">
             </form>
 
-            <form action"/blog" method="POST">
+            <form action="/admin/blog-detail-admin" method="POST">
                 <button class="btn btn-danger btn--blog-detail" type="submit"><span class="btn--blog-detail-text">Delete Post</span></button>
                 <input type="hidden" name="blogId" value="<%= post._id %>">
             </form>

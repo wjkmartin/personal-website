@@ -1,11 +1,41 @@
 <%- include _header %>
 
+<head>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+        function submitForm() {
+            let blogForm = document.getElementById('hiddenInput');
+            let quillContentsStringified = JSON.stringify(quill.getContents());
+            blogForm.value = quillContentsStringified;
+        }
+    </script>
+</head>
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-10 col-middle">
-            
+        <div class="col-middle create-post--container">
+            <h1 class="create-post--page-title"> Create a new post </h1>
+            <form onsubmit="submitForm()" id="form" action="/admin/create-post" method="POST">
+                <div class="form-control create-post--form-container">
+                    <label for="title">Title</label>
+                    <input class="create-post--title-input" type="text" name="title" id="blog-post-title">
+
+                    <div id="editor">
+
+                    </div>
+                    <button class="btn create-post--button-stage-post" type="submit">Stage Post</button>
+                    <script>
+                        var quill = new Quill('#editor', {
+                            theme: 'snow'
+                        });
+                    </script>
+                    <input id="hiddenInput" type="hidden" name="postBody" value="default" />
+                </div>
+            </form>
+
         </div>
-    </div>    
+    </div>
 </div>
 
 <%- include _footer %>

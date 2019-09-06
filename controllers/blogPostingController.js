@@ -52,13 +52,27 @@ exports.getEditPosts = (req, res, next) => {
 			docTitle: 'Will Martin | Edit Blog',
 			path: 'edit-posts',
 			posts: posts,
-			postsToShow: 6
+			postsToShow: posts.length
 		});
 	});
 };
 
+exports.postBlogDetailAdmin = (req, res, next) => {
+	let id = req.body.blogId;
+	res.redirect('/admin/blog-detail-admin/' + id);
+};
+
 exports.getBlogDetailAdmin = (req, res, next) => {
-	
+	let id = req.params.blogId;
+	console.log(id);
+	BlogPost.fetchById(id).then(post => {
+		console.log(post);
+		res.render('blog-detail-admin', {
+			docTitle: 'Will Martin | Edit a blog post',
+			path: 'blog-detail-admin',
+			post: post[0],
+		});
+	});
 };
 
 

@@ -1,5 +1,5 @@
-var express = require('express')
-var router = express.Router()
+var express = require('express');
+var router = express.Router();
 
 const blogPostingController = require('../controllers/blogPostingController');
 
@@ -11,6 +11,9 @@ router.get('/create-post', blogPostingController.getCreatePost);
 router.post('/create-post', blogPostingController.postCreatePost);
 
 router.get('/edit-posts', blogPostingController.getEditPosts);
+router.post('/edit-posts', blogPostingController.postBlogDetailAdmin);
+
+router.get('/blog-detail-admin/:blogId', blogPostingController.getBlogDetailAdmin);
 
 router.get('/stage-post', blogPostingController.getStagePost);
 
